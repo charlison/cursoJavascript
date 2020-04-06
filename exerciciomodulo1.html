@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>
+            exercicio módulo 1
+        </title>
+    </head>
+    <body>
+        hello world
+        <script>
+            var endereco = {
+                rua: 'Rua Yukimiti Kashima',
+                numero: 88,
+                bairro: 'Praia de Carapebus',
+                cidade: 'Serra',
+                uf: 'ES'
+            }
+
+            function exibeEndereco(endereco){
+                var enderecoformatado = 
+                'O usuário mora em ' + endereco.cidade + '/' + endereco.uf 
+                + ', no bairro ' + endereco.bairro
+                + ', na rua "' + endereco.rua 
+                + '" Nº ' + endereco.numero + '.'
+
+                return enderecoformatado;
+            }
+
+            //criar função para exibir o endereço formatad
+            //console.log(exibeEndereco(endereco));
+
+            function pares(x,y){
+                for(x; x<=y; x++){
+                    if(x%2 == 0){
+                        console.log(x);
+                    }
+                }
+            }
+
+            //criar função para exibir os numeros pares em um intervalo
+            //pares(2,200);
+
+            var skils = ['Javascript', 'ReactJS', 'React Native'];
+            var skil = 'React Native';
+            
+            function temHabilidades(skils,skil){
+                var possuiSkil = skils.indexOf(skil) != -1 ? true : false;
+
+                console.log(possuiSkil);
+                
+            }
+
+            //criar função para retornar se um determinado valor está conido em um vetor
+            //temHabilidades(skils, skil);
+
+            var anos = 2;
+            function experiencia(anos){
+                if(anos <= 1){
+                    console.log("Iniciante");
+                }else if(anos >= 2 && anos <= 3){
+                    console.log("Intermediário");
+                }else if(anos > 3 && anos <= 6){
+                    console.log("Avançado");
+                }else if(anos >= 7){
+                    console.log("jedi Master");
+                }else{
+                    console.log("não é possível calcular seu nível de experiencia!");
+                }
+            }
+
+            //Criar uma função para retornar o nivel de experiencia de um usuário de acordo com seus anos de dev
+            // experiencia(anos);
+
+            var usuarios = [
+            {
+                nome: "Diego",
+                habilidades: ["Javascript", "ReactJS", "Redux"]
+            },
+            {
+                nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+            ];
+
+            function exibeHabilidades(usuarios){
+                for (var usuario of usuarios) {
+                    for (var habilidades of usuario.habilidades) {
+                        console.log('O usuário ' + usuario.nome + ' possui as habilidades: ' + usuario.habilidades.join(', '));
+                    }
+                }
+            }
+
+            //Criar uma função que exiba os dados de um array de objetos formatados
+            //se atentar ao join e ao foreach
+            // exibeHabilidades(usuarios);
+
+        </script>
+    </body>
+</html>
