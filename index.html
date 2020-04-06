@@ -4,16 +4,17 @@
             JavasCript
         </title>
         <body>
+            <div id="app">
+                <button onclick="mostraAlerta()">Me pressione!</button>
+                <button onmouseover="mostraAlerta()">Me pressione!</button>
+            </div>
 
             <script>
                 //javascript
-            function exibeAlgo(){
-                console.log("Hello world!");
-            }
-
-            // setInterval(exibeAlgo,1000);
-            setTimeout(exibeAlgo,5000);
-
+                function mostraAlerta(){
+                    alert('Ok');
+                    console.log("botão foi pressionado");
+                }
             </script>
         </body>
     </head>
