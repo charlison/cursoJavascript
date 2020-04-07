@@ -5,21 +5,24 @@
         </title>
         <body>
             <div id="app">
-                <input type="text" name="nome" id="nome">
-                <button class="botao" id="btnAdd">Adicionar</button>
+                <!--<input type="text" name="nome" id="nome" /> -->
             </div>
 
             <script>
                 //javascript
-                var inputelement = document.getElementById("nome");
-                var btnElement = document.getElementById("btnAdd");
-                //var inputelement = document.getElementsByTagName("input")[0];
+                var linkelement = document.createElement('a');
+                linkelement.setAttribute('href', 'http://google.com.br');
+                linkelement.setAttribute('title', 'Google');
 
-                btnElement.onclick = function botaoPressionado(){
-                    var text = inputelement.value;
-                    alert(text);
-                }
+                var textElement = document.createTextNode('Acessar site do google');
+                linkelement.appendChild(textElement);
 
+                var containerelement = document.getElementById('app');
+                containerelement.appendChild(linkelement);
+
+                // var inputelement = document.getElementById("nome");
+                // containerelement.removeChild(inputelement);
+                
             </script>
         </body>
     </head>
