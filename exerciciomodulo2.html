@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Exercicio modulo 2</title>
+    </head>
+    <body>
+        <div class="box" id="box">
+            <button id="btn">Pressione</button>
+
+            <input type="text" id="nome">
+            <button onClick="adicionar()">Adicionar</button>
+
+        </div>
+
+        <script>
+            var btnelement = document.getElementById("btn");
+            var boxelement = document.getElementById("box");
+            var id = 1;
+
+            btnelement.onclick = function Pressionado(id){
+                var novoElemento = document.createElement('div');
+                novoElemento.setAttribute('id',id);
+                novoElemento.style.width = 100;
+                novoElemento.style.height = 100;
+                novoElemento.style.backgroundColor = '#E943F0';
+
+                boxelement.appendChild(novoElemento);
+
+                novoElemento.onclick = function mudaCor(){
+                    novoElemento.style.backgroundColor = getRandomColor();
+                }
+            }
+
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+
+            //var nomes = [];
+            var lista = document.createElement('ul');
+
+            function adicionar(){
+                var nome = document.getElementById("nome").value;
+                //nomes.push(nome);
+                criaElementos(nome);
+                document.getElementById("nome").value = '';
+            }
+
+            function criaElementos(nome){
+                //for(var nome of nomes){
+                    var elemento = document.createElement('li');
+                    elemento.setAttribute('id', nome);
+
+                    var textElement = document.createTextNode(nome);
+                    lista.appendChild(elemento);
+                    elemento.appendChild(textElement);
+                    boxelement.appendChild(lista);
+                    //console.log(nome);
+                //}
+            }
+            
+        </script>
+    </body>
+</html>

@@ -5,25 +5,12 @@
         </title>
         <body>
             <div id="app">
-                <!--<input type="text" name="nome" id="nome" /> -->
+                <ul id="lista"></ul>
+                <input type="text" id="entrada" placeholder="Digite um todo">
+                <button id="button">Adicionar</button>
             </div>
 
-            <script>
-                //javascript
-                var linkelement = document.createElement('a');
-                linkelement.setAttribute('href', 'http://google.com.br');
-                linkelement.setAttribute('title', 'Google');
-
-                var textElement = document.createTextNode('Acessar site do google');
-                linkelement.appendChild(textElement);
-
-                var containerelement = document.getElementById('app');
-                containerelement.appendChild(linkelement);
-
-                // var inputelement = document.getElementById("nome");
-                // containerelement.removeChild(inputelement);
-                
-            </script>
+            <script src="todos.js"></script>
         </body>
     </head>
 </html>
